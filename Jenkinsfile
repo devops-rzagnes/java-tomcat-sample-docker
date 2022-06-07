@@ -17,7 +17,6 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "ls -a"
-                sh "sudo chmod 666 /var/run/docker.sock"
                 sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
